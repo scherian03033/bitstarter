@@ -73,7 +73,7 @@ var buildfn = function(checksfile) {
 };
 
 var checkUrl = function(targetUrl, checksfile) {
-    console.log("checkUrl called with %s, %s", targetUrl, checksfile);
+//    console.log("checkUrl called with %s, %s", targetUrl, checksfile);
     var handleUrl = buildfn(checksfile);
     rest.get(targetUrl).on('complete', handleUrl);
 };
