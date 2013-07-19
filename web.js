@@ -6,6 +6,8 @@ var fs = require('fs');
 
 var foobuf = new Buffer(fs.readFileSync("index.html"));
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(request, response) {
     response.send(foobuf.toString());
 });
